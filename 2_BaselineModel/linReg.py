@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import os
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
@@ -8,7 +9,10 @@ from sklearn.ensemble import HistGradientBoostingRegressor
 from sklearn.impute import SimpleImputer
 
 # Daten laden
-training_data = pd.read_csv('training_data.csv')
+script_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(script_dir, 'training_data.csv')
+training_data = pd.read_csv(file_path)
+
 training_data['Datum'] = pd.to_datetime(training_data['Datum'])
 
 # Feature Engineering
