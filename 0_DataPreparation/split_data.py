@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Daten laden
-merged_data = pd.read_csv('merged_data.csv')
+merged_data = pd.read_csv("0_DataPreparation/merged_data_full_with_weekdays.csv")
 
 # Datum-Spalte in datetime konvertieren
 merged_data['Datum'] = pd.to_datetime(merged_data['Datum'])
@@ -25,8 +25,8 @@ validation_data = merged_data[
 ]
 
 # Speichern der Datensätze
-training_data.to_csv('training_data.csv', index=False)
-validation_data.to_csv('validation_data.csv', index=False)
+training_data.to_csv('0_DataPreparation/training_data.csv', index=False)
+validation_data.to_csv('0_DataPreparation/validation_data.csv', index=False)
 
 # Überprüfung der Datensätze
 print("Trainingsdatensatz:")
