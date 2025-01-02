@@ -7,10 +7,12 @@ from sklearn.pipeline import Pipeline
 from sklearn.metrics import r2_score
 from sklearn.ensemble import HistGradientBoostingRegressor
 from sklearn.impute import SimpleImputer
+import matplotlib.pyplot as plt
 
 # Daten laden
 script_dir = os.path.dirname(os.path.abspath(__file__))
-file_path = os.path.join(script_dir, 'training_data.csv')
+#file_path = os.path.join(script_dir, 'training_data.csv')
+file_path = os.path.join(script_dir, '../0_DataPreparation/merged_data_full_with_weekdays.csv')
 training_data = pd.read_csv(file_path)
 
 training_data['Datum'] = pd.to_datetime(training_data['Datum'])
@@ -60,3 +62,13 @@ adjusted_r2 = 1 - (1 - r2) * (n - 1) / (n - p - 1)
 
 print(f"R²: {r2:.4f}")
 print(f"Adjustiertes R²: {adjusted_r2:.4f}")
+
+
+
+plt.figure(figsize=(8, 6))
+plt.scatter(y, y_pred, alpha=0.6)
+plt.plot([y.min(), y.max()], [y.min(), y.max()], 'r--', lw=2)
+plt.xlabel('Tatsächlicher Umsatz')
+plt.ylabel('Vorhergesagter Umsatz')
+plt.title('Tatsächlicher vs. Vorhergesagter Umsatz')
+plt.show()
