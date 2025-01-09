@@ -1,3 +1,3 @@
 # Presentation
 
-[Presentation](04_presentation/Presentation.pptx)
+[Presentation](Presentation.pptx)
