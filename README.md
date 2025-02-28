@@ -17,12 +17,12 @@ Regression
 -   **Best Model:** Neural Network with Optimized Architecture
 -   **Evaluation Metric:** MAPE
 -   **Result by Category** (Identifier):
-    -   **Bread** (1): 15.42%
-    -   **Rolls** (2): 12.87%
-    -   **Croissant** (3): 18.63%
-    -   **Confectionery** (4): 20.15%
-    -   **Cake** (5): 17.94%
-    -   **Seasonal Bread** (6): 22.31%
+    -   **Bread** (1): 14.23%
+    -   **Rolls** (2): 11.56%
+    -   **Croissant** (3): 17.89%
+    -   **Confectionery** (4): 19.42%
+    -   **Cake** (5): 16.78%
+    -   **Seasonal Bread** (6): 21.95%
 
 ## Documentation
 
